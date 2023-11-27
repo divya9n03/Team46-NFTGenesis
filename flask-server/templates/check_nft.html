@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFTGenesis Check Rarity</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body{
+            font-family: 'Poppins';
+        }
+        h1{
+            font-size: 40px;
+            position: absolute;
+            left: 80px;
+            top: 20px;
+        }
+        #content{
+            width: 430px;
+            height: 200px;
+            position: absolute;
+            left: 80px;
+            margin-right: 100px;
+            text-align: justify;
+            top: 140px;
+            font-size: 20px;
+        }
+        #form{
+            position: absolute;
+            background-color: rgba(203, 148, 255, 0.196);
+            font-size: 25px;
+            width: 500px;
+            height: 430px;
+            right: 130px;
+            text-align: center;
+            top: 60px;
+           
+            
+        }
+        input{
+            font-size: 25px;
+        }
+        #accept_img{
+            padding-left: 95px;
+            padding-top: 140px;
+        }
+        #upload{
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: 5px solid transparent;
+            font-size: 25px;
+            padding: 10px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            top: 240px;
+            right: 133px;
+        }
+        
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        video#video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 30%;
+        }
+        #image_container{
+            width: 256px;
+            height: 256px;
+            position: absolute;
+            left: 160px;
+            top: 260px;
+
+        }
+        #logo{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            
+            
+        }
+        #form-2{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            opacity: 0%;
+            
+            
+        }
+        #button{
+            color: transparent;
+            width:100%;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="/static/images/video2-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    {% if img_data %}
+    <div id="image_container"><img src="data:image/png;base64,{{ img_data }}" alt="Generated Image"></div>
+    {% endif %}
+    <h1>Check rarity of your NFT</h1>
+    <div id="content">{{ res }}</div>
+    <form class="upload-form" action="/check_nft" method="post" enctype="multipart/form-data" id="form">      
+        <input type="file" name="image" id="accept_img" accept="image/*" required>
+        <input type="submit"  id="upload" value="CHECK">
+    </form>
+    <video autoplay muted loop  id="logo">
+        <source src="/static/images/Logo_resized.mp4" type="video/mp4">
+    </video>
+    <form id="form-2" action="/redirect_home" method="get">      
+        <input type="submit"  id="button">
+    </form>
+
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href='https://fonts.googleapis.com/css?family=Libre Franklin' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<style>
+    body{
+        background-color: rgba(0, 17, 204, 0.845);
+        font-family: 'Poppins';
+    }
+    #passwordMatch{
+        font-size: 30px;
+    }
+    #white-box{
+        position: absolute;
+        left: 100px;
+        margin: 70px;
+        margin-top: 10px;
+        background-color: rgba(197, 215, 255, 0.347);
+        margin-left: 240px;
+        border-radius: 40px;
+        z-index: 1;
+        width: 600px;
+        height: 400px;
+        opacity: 80%;
+    }
+    form{
+        position: absolute;
+        background-color: transparent;
+        left: 350px;
+        top: 27px;
+        margin-top: 0;
+        margin: 70px;
+        z-index: 2;
+
+    }
+    label{
+        font-weight: bold;
+        font-size: 20px;
+        color: black;
+    }
+    #register-button{
+        background-color: rgb(18, 99, 206);
+        color: rgb(255, 255, 255);
+        padding: 15px;
+        font-size: 25px;
+        position: absolute;
+        left:295px;
+        z-index: 1;
+        margin-top: 35px;
+        
+    }
+    input{
+       display: inline;
+       margin: 5px;
+       padding: 10px;
+       border-radius: 10px;
+       border: 1px transparent solid;
+       z-index: 1;
+       margin-left: 20px;
+       width: 200px;
+
+    }
+  
+    .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        overflow: hidden;
+        z-index: -1;
+        }
+
+    #myVideo {
+        position: fixed;
+        right:0;
+        bottom:0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        }
+    h2{
+        color: white;
+        position: relative;
+        top:0px;
+        left: 350px;
+        margin: 10px;
+    }
+            
+</style>
+<body>
+    {% if message %}
+        <h2>{{ message }}</h2>
+    {% endif %}
+    <div id="white-box"></div>
+    <div class="background-video">
+        <video autoplay muted loop id="myVideo">
+          <source src="/static/images/blue_river_main.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    <form method="POST" action="/register">
+        <label>Name</label>
+        <input type="text" name="name" required><br><br>
+        <label>Username</label>
+        <input type="text" name="username" required><br><br>
+        <label>Password</label>
+        <input type="password" name="password" id="password" required><br><br>
+        <label>Confirm password</label>
+        <input type="password" name="confirmpassword" id="confirmPassword" oninput="checkPassword()" required><span id="passwordMatch" class="password-match">&#128522;</span><br><br>
+        <label>Email</label>
+        <input type="text" name="email" required><br><br>
+        <input type="Submit" id="register-button" value=" REGISTER ">
+    </form>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const passwordMatch = document.getElementById('passwordMatch');
+
+            if (password === confirmPassword) {
+                passwordMatch.style.display = 'inline';
+                passwordMatch.className = 'match';
+                passwordMatch.innerHTML = '&#128522;';
+            } else {
+                passwordMatch.style.display = 'inline';
+                passwordMatch.className = 'no-match';
+                passwordMatch.innerHTML = '&#128528;';
+        }}
+    </script>
+</body>
+</html>

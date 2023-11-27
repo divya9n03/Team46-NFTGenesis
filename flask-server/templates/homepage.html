@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFTGenesis</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+        body {
+            background: linear-gradient(to bottom, white, black);
+            min-height: 210vh;
+            margin: 0;
+            }
+
+
+        h2{
+            text-align: center;
+            font-size: 110px;
+            margin: 50px;
+            
+        }
+        
+        .grid-container {
+            position: absolute;
+            
+            left: 315px;
+            top: 200px;
+            width: 400px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 40px;
+        }
+        .grid-item {
+            width: 300px;
+            height: 250px;            
+        }
+        form{
+            height: 100%;
+            width: 100%;
+            text-align: center;
+           
+            
+        }
+        #info1{
+            color: aliceblue;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 250px;
+           
+        }
+        #info2{
+            color: aliceblue;
+            position: absolute;
+            top: 0px;
+            left: 340px;
+            width: 300px;
+            height: 250px;
+        }
+        #info3{
+            color: aliceblue;
+            position: absolute;
+            top: 290px;
+            left: 0px;
+            width: 300px;
+            height: 250px;
+        }
+        #info4{
+            color: aliceblue;
+            position: absolute;
+            top: 290px;
+            left: 340px;
+            width: 300px;
+            height: 250px;
+        }
+
+        #info5{
+            color: aliceblue;
+            position: absolute;
+            top: 580px;
+            left: 0px;
+            width: 300px;
+            height: 250px;
+        }
+
+        #info6{
+            color: aliceblue;
+            position: absolute;
+            top: 580px;
+            left: 340px;
+            width: 300px;
+            height: 250px;
+        }
+
+        .submit{
+            width: 100%;
+            height: 100%;
+            opacity: 0%;
+            
+        }
+        #generate{
+            background-color: rgb(0, 0, 0);
+        }
+        #authenticate{
+            background-color:rgb(54, 53, 53);
+        }
+        #mint{
+            background-color: rgb(80, 72, 86);
+        }
+        #predict{
+            background-color: rgb(98, 81, 116);
+        }
+        #contact{
+            
+            background-color: rgb(129, 90, 141);
+        }
+        #check_nft{
+            background-color: rgb(148, 126, 151);
+        }
+        
+        h3, p{
+            font-family: 'Poppins';
+            color: white;
+            
+        }
+        h1{
+            color: white;
+            text-align: right;
+            padding-top: 60px;
+            padding-right: 30px;
+        }
+        p{
+            text-align: left;
+            padding-left: 30px;
+            padding-right: 10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>NFTGENESIS</h2>
+    <div class="grid-container">
+        <div class="grid-item" id= "generate">
+            <form  action="/generate_wp" method="POST">
+                <h3>GENERATE</h3>
+                <p class="info">Text-to-NFT synthesis using stable diffusion</p>
+                <h1>→</h1>
+                <button id="info1" class="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-item" id= "authenticate">
+            <form action="/auth_wp"  method="POST">
+                <h3>AUTHENTICATE</h3>
+                <p class="info">Legitimize your NFT using DL steganography</p>
+                <h1>→</h1>
+                <button class="submit" id="info2" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-item" id= "mint">
+            <form action="/mint" method="POST" >
+                <h3>MINT</h3>
+                <p class="info">Easiest way to mint, trade and bid on NFTs</p>
+                <h1>→</h1>
+                <button class="submit" id="info3" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-item" id= "predict">
+            <form action="/predict"  method="POST">
+                <h3>PREDICT</h3>
+                <p class="info">Predict market price value of your NFT</p>
+                <h1>→</h1>
+                <button class="submit" id="info4" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-item" id= "check_nft">
+            <form action="/check_nft"  method="POST">
+                <h3>VALIDATE NFT</h3>
+                <p class="info">Check the rarity of your NFT with NFTGenesis</p>
+                <h1>→</h1>
+                <button class="submit" id="info5" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="grid-item" id= "contact">
+            <form action="/about_us"  method="POST">
+                <h3>ABOUT US</h3>
+                <p class="info">Know more about us now</p>
+                <h1>→</h1>
+                <button class="submit" id="info6" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script>
+        setTimeout(function() {
+            window.location.href = '{{ url_for("redirect_home") }}';
+        }, 2000);  
+    </script>
+    <style>
+        html,
+body {
+    font-family: "Poppins";
+  font-size: 24px;
+  text-align: center;
+}
+h3{
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+    </style>
+</head>
+<body>
+    <h3>You've successfully signed up yay!</h3>
+    <img src="/static/images/tick.gif">
+</body>
+</html>

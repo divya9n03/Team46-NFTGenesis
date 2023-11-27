@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFTGenesis Solution</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <style>
+        *{
+            font-family: 'Poppins';
+        }
+        #gen-image{
+            width: 300px;
+            height: 250px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        h1{
+            margin-top: 50px;
+            color: rgb(255, 255, 255);
+        }
+       
+
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255); 
+            background-image: url("cool_pic.jpg");
+            position: relative; 
+            height: 100%;
+        }
+
+#download-img{
+        position: absolute;
+        height: 70px;
+        width:180px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        margin-bottom: 30px;
+        margin-top: 4px;
+        font-size: 20px;
+        border-radius: 10px;
+        border:0;
+        left: 485px;
+        top: 470px;
+    }
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgb(255, 255, 255); 
+    z-index: -1;
+}
+
+.box {
+    width:auto;
+    height: 400px;
+    background-color: rgb(0, 0, 0); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: expand-box1 3s  ease forwards; 
+    z-index: -1;
+}
+
+.box1 {
+    width:auto;
+    height: 600px;
+    background-color: rgb(0, 0, 0); 
+    position: absolute;
+    top: 200px;
+    left: 0;
+    animation: expand-box 3s ease 1 reverse, hide-box 2s ease 4s forwards;;
+    z-index: -1;
+}
+@keyframes expand-box {
+    0% {
+        width: 0;
+        opacity: 0;
+        background-color: rgb(0, 0, 0);
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+        
+    
+    }
+}
+@keyframes expand-box1 {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+      
+    }
+}
+@keyframes hide-box {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0; 
+    }
+
+}
+#mint_button {
+    position: absolute;
+    top: 455px;
+    left: 700px;
+    background-image: url("/static/images/download.png"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100px;
+    width: 100px;
+    
+    border: none; 
+    color: #fff; 
+    font-size: 16px; 
+    text-align: center;
+    line-height: 100px;
+}
+
+        #logo{
+            position: absolute;
+            top: 450px;
+            right:20px;
+            z-index: 1;
+            
+            
+        }
+        #form-2{
+            position: absolute;
+            top: 450px;
+            right:20px;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+            opacity: 0%;
+            
+            
+        }
+        #button{
+            color: transparent;
+            width:100%;
+            height: 100%;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        
+    <h1>Generation successful!!</h1>
+    <img src="data:image/png;base64,{{ img_data }}" id="gen-image" alt="Generated Image">
+    <form method="post" action="/download">
+        <input type="hidden" name="img_data" value="{{ img_data }}">
+        <button type="submit" id="mint_button"></button>
+    </form>
+    <form method="post" action="/mint">
+        <button type="submit" id="download-img">Mint NFT</button>
+    </form>
+    <div class="box"></div>
+    <div class="box1"></div>
+    </div> 
+    <video autoplay muted loop  id="logo">
+        <source src="/static/images/Logo_resized.mp4" type="video/mp4">
+    </video>
+    <form id="form-2" action="/redirect_home" method="get">      
+        <input type="submit"  id="button">
+    </form>
+</body>
+
+</html>

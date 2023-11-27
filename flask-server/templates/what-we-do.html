@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFTGenesis</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        *{
+            font-family: 'Poppins';
+            font-size: 40px;
+        }
+        #content{
+            display: inline-flex;
+            text-align: center;
+            position: absolute;
+            left: 430px;
+            top: 210px;
+        }
+        h1{
+            margin-right: 15px;
+        }
+        #second-word{
+            color: rgb(161, 61, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1 id="first-word">NFTGenesis</h1>
+        <h1 id="second-word">generate</h1>
+    </div>
+    
+</body>
+<script>
+const textElement = document.getElementById("second-word");
+const contentArray = [
+ 
+  "authenticate",
+  "mint",
+  "predict",
+  "browse"
+];
+
+let currentIndex = 0;
+
+function changeContent() {
+  textElement.textContent = contentArray[currentIndex];
+  currentIndex = (currentIndex + 1) % contentArray.length;
+}
+
+
+setInterval(changeContent, 800);
+setTimeout(function() {
+        window.location.href = '{{ url_for("redirect_to_login") }}';
+    }, 3900); 
+
+</script>
+</html>

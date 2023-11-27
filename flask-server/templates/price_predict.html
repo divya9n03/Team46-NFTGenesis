@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFTGenesis Predict</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<style>
+    *{
+        font-family: "Poppins";
+    }
+    body{
+        min-height: 100vh;
+    }
+    .video-background #vid {
+      position: relative;
+      width: 100%; 
+      min-height: 100vh; 
+      overflow: hidden;
+    }
+    
+    .video-background #vid {
+      position: absolute;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+      width: 600px;
+      object-fit: cover; 
+      z-index: -1; 
+    }
+
+    .content {
+      position: absolute;
+      z-index: 1; 
+      right: 0px;
+      padding: 0px;
+      
+    }
+    #para{
+        text-align: justify;
+        width: 518px;
+        height: 200px;
+        position: absolute;
+        right: 80px;
+        top: 90px;
+        
+    }
+    h1{
+        position: absolute;
+        right: 80px;
+        font-size: 40px;
+    }
+    input{
+            font-size: 25px;
+    }
+    #res{
+      margin-right: 50px;
+      background-color: rgba(255, 255, 255, 0.231);
+      margin-top: 50px;
+      padding: 10px;
+    }
+    #res_img{
+      padding-top: 50px;
+      padding-left: 155px;
+    }
+    h2{
+      padding-right: 0px;
+      padding-top: 30px;
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    #accept_img{
+            padding-left: 95px;
+            padding-top: 140px;
+            position: relative;
+            top: 250px;
+            right: 60px;
+    }
+    #upload{
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: 5px solid transparent;
+            font-size: 25px;
+            padding: 10px;
+            padding-left: 65px;
+            padding-right: 65px;
+            position: absolute;
+            top: 470px;
+            right: 328px;
+    }
+    #logo{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            
+            
+        }
+        #form-2{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+            opacity: 0%;
+            
+            
+        }
+        #button{
+            color: transparent;
+            width:100%;
+            height: 100%;
+        }
+
+</style>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted id="vid">
+          <source src="/static/images/black_cube_cool.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+  
+        <div class="content">
+          
+          {% if img_data %}
+          <div id="res">
+          <img id="res_img" src="data:image/png;base64,{{ img_data }}" id="gen-image" alt="Generated Image">
+          <h2 id="res_price">Your NFT is approximated at {{ NFT_price }} </h2></div>
+          {% else %}
+          <h1>Predict the best price now</h1>
+          <div id="para"><p>Predicting NFT prices with ResNet model combines time series and image analysis.Challenges include data quality and market volatility. NFT predictions should be used cautiously, alongside market expertise.</p>
+          </div>
+        <form class="upload-form"action="/predict" method="post" enctype="multipart/form-data" id="form">      
+            <input type="file" name="image" id="accept_img" accept="image/*" required>
+            <input type="submit"  id="upload" value="GET VALUE">
+        </form>
+        {% endif %}
+      </div>
+      <video autoplay muted loop  id="logo">
+          <source src="/static/images/Logo_resized.mp4" type="video/mp4">
+      </video>
+      <form id="form-2" action="/redirect_home" method="get">      
+          <input type="submit"  id="button">
+      </form>
+</body>
+</html>
