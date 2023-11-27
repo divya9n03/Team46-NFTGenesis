@@ -1,0 +1,43 @@
+.white{
+        background-color: rgb(211, 211, 211);
+        
+        height: 365px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+       }
+       .image-container {
+        bottom: 0;
+        opacity: 80%;
+        display: flex;
+        animation: moveImages 5s linear infinite;
+        width: 100%; /* Set the width to accommodate all 5 images */
+        position: absolute; /* Set the container to absolute position */
+        bottom: 0; 
+        margin-bottom: 20px;
+    }
+    
+    .image-container img {
+        bottom: 0;
+        width: 20%; /* 100% / 5 images = 20% per image */
+        height: auto;
+        margin-bottom: 20px;
+    }
+    #download-img{
+        height: 70px;
+        width:350px;
+        color: white;
+        background-color: black;
+        margin-bottom: 30px;
+        margin-top: 4px;
+    }
+    @keyframes moveImages {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%); /* Translate by 100% per image (5 images in total) */
+        }
+    }

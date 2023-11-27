@@ -1,0 +1,132 @@
+body{
+    font-family: 'Poppins'; 
+    background-color: rgb(0, 0, 0);
+}
+image{
+    margin-left: 100px;
+}
+
+.login{
+    margin-top: 0px;
+}
+#nft-head{
+    margin-bottom: 10px;
+}
+
+.text-gradient-container {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, black 40%, rgb(255, 255, 255) 40%);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari/WebKit browsers */
+    color: transparent; /* Make the text transparent */
+    font-size: 15px; /* Adjust the font size as needed */
+    font-weight: bold; /* Adjust the font weight as needed */
+}
+.h1{
+    font-size: 50px;
+    color: black;
+}
+/* .h6{
+    margin-top: 0;
+    margin-left: 300px;
+    padding: 0px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+} */
+#sign-up{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 0px;
+    bottom: 0px;
+}
+
+a{
+    color: rgb(200, 0, 250);
+}
+.image-container {
+   
+    text-align: left;
+    top:500px;
+
+}
+
+/* Style the image */
+.image {
+   
+    width: 100%;
+   
+}
+img{
+    height: 400px;
+    width: 470px;
+}
+/* Style the overlaid text */
+.overlay-text {
+
+    position: absolute;
+    top: 30%; /* Position the text vertically centered */
+    left: 50%; /* Position the text horizontally centered */
+    transform: translate(-50%, -50%); 
+    color: white;
+    /* padding: 10px; */
+    font-size: 20px;
+}
+.container {
+    display: flex; /* Use flexbox for the layout */
+    width: 100%; /* Make the container full-width */
+}
+
+.leftcol {
+    flex: 1; 
+    
+    
+    color: rgb(217, 0, 255);
+    font-size: 40px;
+    margin-left: 70px;
+    padding: auto;
+}
+
+#rect{
+    position: absolute;
+    background-color: rgb(37, 5, 46);
+    border: rgb(109, 105, 109) solid 1px;
+    width:900px;
+    height:400px;
+    z-index: -1;
+    margin-left: 300px;
+    opacity: 60%;
+}
+.rightcol {
+    margin-top: 65px;
+    /* display: grid; */
+    place-items: center;
+    width: 400px;
+    height: 400px;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 75px;
+    color: white;
+    background-color: rgb(62, 62, 62);
+    border-radius: 10%;
+    text-align: center;
+}
+form{
+    padding: 0px;
+}
+
+input{
+    color: rgb(0, 0, 0);
+    border-radius: 10cm;
+    border: 0px;
+    padding: 10px;
+}
+
+#login-button{
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(215, 57, 255);
+    border: 0px;
+    
+}
+

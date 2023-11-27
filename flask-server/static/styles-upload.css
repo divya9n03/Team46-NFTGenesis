@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ape{
+    width: 500px;
+    height:100px;
+}
+#main{
+    text-align: center;
+    left: 200px;
+}
+/* Style the centered div */
+.centered-div{
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 140px;
+    width:1000px;
+    text-align: center;
+    
+}
+h1{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+label{
+    font-size: 20px;
+    color: rgb(255, 149, 251);
+}
+h3{
+    font-size: 30px;
+    font-weight:bold;
+    color: rgb(243, 111, 255);
+    
+
+}
+form{
+    background-color: rgb(65, 58, 69);
+   
+}
+
+#upload{border: rgb(117, 116, 116) solid 1px;}
