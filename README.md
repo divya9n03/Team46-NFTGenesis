@@ -11,6 +11,8 @@ This is the official repository for the UE20CS461A Capstone project of Team 46.<
 NFTGenesis is a platform built to minimize cyber frauds and to ensure NFT (Non-Fungible Token) authenticity using a sophisticated approach to crypto-steganography infused with deep learning. It is an integrated web application that enables NFT authentication, predictive pricing analysis, keyword based NFT creation and in a nutshell acts as a robust marketplace for NFT minting.
 <br><br>
 
+Link to dataset: https://drive.google.com/drive/u/0/folders/1y4gtgzEAhovCKP1-3d-jQIBNu28bg7Mw
+
 # Steps to run the web application
 ### Installation
 Clone the NFTGenesis repository onto your local system.<br>
