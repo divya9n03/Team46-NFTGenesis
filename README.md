@@ -4,7 +4,7 @@ This is the official repository for the UE20CS461A Capstone project of Team 46.<
 | --------------- | --------------- |
 | Divya N   | PES2UG20CS114    |
 | Eeshan Dhawan    | PES2UG20CS117    |
-| H Sarath Sundar    | PES2UG20CS130    |
+| H Sarath Sundar    | PES2UG20CS131    |
 | Harshit Jain    | PES2UG20CS136   |
 
 <br>
