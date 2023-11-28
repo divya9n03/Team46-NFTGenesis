@@ -16,6 +16,7 @@ Link to dataset: https://drive.google.com/drive/u/0/folders/1y4gtgzEAhovCKP1-3d-
 # Steps to run the web application
 ### Installation
 Clone the NFTGenesis repository onto your local system.<br>
+Download required models from the drive link : https://drive.google.com/drive/folders/1DqmxLBCGJQppWkhzhpPhjg6XNwg6ittX
 
 ### Step 1 
 Start the flask server using the command ```python app.py```<br>
