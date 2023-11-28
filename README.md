@@ -32,5 +32,5 @@ NFTGenesis offers different token utilities.<br>
 * **NFT Authenticator:** Input an NFT to generate an authenticated NFTGenesis certified token using a Generative Adversarial Network (GAN).<br><br>
 * **NFT Price Predictor:** Feed an NFT to the augmented ResNet50 model to understand the market price and rarity value of your token.<br><br>
 * **NFT Minter:** Input an NFT to buy,sell or bid NFTs. Browse through NFTGenesis dashboard to trade tokens after connecting to your verified crypto-wallet.<br><br>
-* **NFT Validator:** To esnure the authenticity and legitimacy of a token before buying/selling from another token holder, validate whether the token is NFTGenesis certified or not.<br><br>
+* **NFT Validator:** To ensure the authenticity and legitimacy of a token before buying/selling from another token holder, validate whether the token is NFTGenesis certified or not.<br><br>
 
