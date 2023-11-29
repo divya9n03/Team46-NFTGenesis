@@ -25,7 +25,7 @@ To run the node server first install all the required npm modules using ```npm i
 Next, run ```npx hardhat run scripts/deploy.js --network localhost```
 Finally, run ``` npm run dev``` command to deploy the node server<br>
 ### Step 3
-Open localhost:3000 in your convenient browser to launch NFTGenesis. Create an account and register yourself.
+Open localhost:5000 in your convenient browser to launch NFTGenesis. Create an account and register yourself.
 ### Step 4
 NFTGenesis offers different token utilities.<br>
 * **NFT Generator:** Input a keyword or a phrase to generate a token based on the same. This generation is performed using a fine-tuned stable diffusion model.<br><br>
