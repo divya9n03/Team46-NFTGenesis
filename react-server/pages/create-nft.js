@@ -27,7 +27,7 @@ import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketp
 
 export default function CreateItem() {
   const [fileUrl, setFileUrl] = useState(null)
-  const [formInput, updateFormInput] = useState({ price: '', name: '', description: '' })
+  const [formInput, updateFormInput] = useState({ price: '', name: '', description: '',})
   const router = useRouter()
 
   async function onChange(e) {
@@ -57,6 +57,7 @@ async function uploadToIPFS() {
         name,
         description,
         image: fileUrl,
+        key,
     })
 
     try {
